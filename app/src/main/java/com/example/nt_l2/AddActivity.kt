@@ -47,7 +47,7 @@ class AddActivity : AppCompatActivity() {
 
 
     fun dodaj(view: View){
-        if(add_url_edit.text.isNotBlank() && add_name_edit.text.isNotBlank() && add_date_edit.text.isNotBlank() && add_tags_edit.text.isNotBlank()){
+        if(add_url_edit.text.isNotBlank() && add_name_edit.text.isNotBlank() && add_date_edit.text.isNotBlank()){
             var obiekt:String = add_url_edit.text.toString()
             obiekt = obiekt + "?#@?" + add_name_edit.text.toString()
             obiekt = obiekt + "?#@?" + add_date_edit.text.toString()

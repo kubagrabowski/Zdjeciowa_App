@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "671264207742",
+    "firebase_url": "https://swim-lab2.firebaseio.com",
+    "project_id": "swim-lab2",
+    "storage_bucket": "swim-lab2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671264207742:android:e3862304466c8aa3",
+        "android_client_info": {
+          "package_name": "com.example.nt_l2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671264207742-eo66ossa5oijna4g8nl3ub54kfrb3qoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArPu7zhSOXgNsX9LZXMts4kmStHlhVQpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671264207742-eo66ossa5oijna4g8nl3ub54kfrb3qoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
