@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="shiraz">#B30A1E</color>
+    <color name="vulcan">#121622</color>
+    <color name="shark">#88888F</color>
+    <color name="california">#FC9C02</color>
+    <color name="violet">#1E0829</color>
+    <color name="rust">#BE320D</color>
 </resources>

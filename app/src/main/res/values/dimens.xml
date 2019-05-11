@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="NT_L2_margin">8dp</dimen>
+
+
+    <dimen name="NT_L2_add_naglowek">30sp</dimen>
+    <dimen name="NT_L2_add_etykieta">25sp</dimen>
+    <dimen name="NT_L2_add_txt">18dp</dimen>
+    <dimen name="NT_L2_add_button">84dp</dimen>
+    <dimen name="NT_L2_add_buttonsize">30dp</dimen>
+
+    <dimen name="NT_L2_ListItemImage">255dp</dimen>
+    <dimen name="NT_L2_ListItem_etykieta">20sp</dimen>
+    <dimen name="NT_L2_ListItem_marginLR">30dp</dimen>
+    <dimen name="NT_L2_ListItem_margintag">40dp</dimen>
+
+    <dimen name="NT_L2_opis_etykietaSize">25sp</dimen>
+    <dimen name="NT_L2_opis_etykietaheight">80dp</dimen>
+    <dimen name="NT_L2_opis_etykietawidth">120dp</dimen>
+    <dimen name="NT_L2_opis_etykietawidthEdit">220dp</dimen>
+    <dimen name="NT_L2_etykietaPodobneSize">30sp</dimen>
+    <dimen name="NT_L2_opis_etykietaSizeEdit">15sp</dimen>
+
+
+</resources>

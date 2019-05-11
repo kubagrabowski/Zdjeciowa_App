@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.DatePickerDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.hardware.camera2.params.BlackLevelPattern
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,7 +19,6 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
     }
-
 
 
     fun wprowadzDate(view:View){
@@ -42,26 +42,16 @@ class AddActivity : AppCompatActivity() {
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
 
+        add_date_edit.setTextColor(resources.getColor(R.color.vulcan))
     }
 
 
 
     fun dodaj(view: View){
-        if(add_url_edit.text.isNotBlank() && add_name_edit.text.isNotBlank() && add_date_edit.text.isNotBlank()){
+        if(add_url_edit.text.isNotBlank() && add_name_edit.text.isNotBlank() && add_date_edit.text != "Twoja data"){
             var obiekt:String = add_url_edit.text.toString()
-            obiekt = obiekt + "?#@?" + add_name_edit.text.toString()
-            obiekt = obiekt + "?#@?" + add_date_edit.text.toString()
-
-            val tagi_list = add_tags_edit.text.toString().split("#")
-            var dodawany = 1
-            var tagi =""
-
-            while(dodawany<=tagi_list.lastIndex && dodawany<=3){
-                tagi = tagi + "#" + tagi_list[dodawany]
-                dodawany++
-            }
-
-            obiekt = obiekt + "?#@?" + tagi
+            obiekt = obiekt + getString(R.string.NT_L2_oddzielenie) + add_name_edit.text.toString()
+            obiekt = obiekt + getString(R.string.NT_L2_oddzielenie) + add_date_edit.text.toString()
 
 
             val intent = this.intent
@@ -71,7 +61,7 @@ class AddActivity : AppCompatActivity() {
             finish()
         }
         else{
-            Toast.makeText(this,"Wprowadź wszystkie dane",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,getString(R.string.NT_L2_add_errorBrakDanych),Toast.LENGTH_LONG).show()
         }
 
 

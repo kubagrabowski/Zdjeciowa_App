@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">NT_L2</string>
+    <string name="NT_L2_add_naglowek">Dodawanie obrazu</string>
+    <string name="NT_L2_add_urlexample">https://square.github.io/picasso/static/sample.png</string>
+    <string name="NT_L2_add_txtURL">URL</string>
+    <string name="NT_L2_add_txtnazwa">Nazwa</string>
+    <string name="NT_L2_add_editData">Twoja data</string>
+    <string name="NT_L2_add_Data">Data</string>
+    <string name="NT_L2_add_buttonDodaj">Dodaj</string>
+    <string name="NT_L2_opis_txtnazwa">Nazwa</string>
+    <string name="NT_L2_opis_txttagi">Tagi</string>
+    <string name="NT_L2_opis_txtdata">Data dodania</string>
+    <string name="NT_L2_opis_txtpodobne">Zdjęcia podobne</string>
+
+    <string name="NT_L2_add_errorBrakDanych">Wprowadź wszystkie dane</string>
+    <string name="NT_L2_oddzielenie">\?#@?</string>
+    <string name="NT_L2_adap_toastonClick">By zobaczyć więcej przeciągnij palcem w lewo lub kliknij</string>
+
+    <string name="NT_L2_start_url1">https://cdn.pastemagazine.com/www/articles/IronThroneMain1.jpg</string>
+    <string name="NT_L2_start_name1">Iron Throne</string>
+    <string name="NT_L2_start_date1">01.01.2001</string>
+    <string name="NT_L2_start_url2">
+        https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06d524b6-a2ee-4ece-b674-e94b5ca69833/d5k97wg-8fa0f6e4-e164-4afc-a49d-56c107fee707.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2ZDUyNGI2LWEyZWUtNGVjZS1iNjc0LWU5NGI1Y2E2OTgzM1wvZDVrOTd3Zy04ZmEwZjZlNC1lMTY0LTRhZmMtYTQ5ZC01NmMxMDdmZWU3MDcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MbbQpHw3gsIS81ARp3A-0QGDOaWb1AEChLtPRxeLe2M
+    </string>
+    <string name="NT_L2_start_name2">MR.CAT</string>
+    <string name="NT_L2_start_date2">10.04.2002</string>
+    <string name="NT_L2_start_url3">
+        https://vignette.wikia.nocookie.net/gameofthrones/images/0/09/GoT-Sn7_FirstLook_18.jpg/revision/latest/scale-to-width-down/350?cb=20170714161029
+    </string>
+    <string name="NT_L2_start_name3">Drogon</string>
+    <string name="NT_L2_start_date3">18.08.2018</string>
+    <string name="NT_L2_start_url4">
+        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxax4ApuF2F00tPaeOJxt8eIYejWStoSeI9j6TK42Rb_7Y4l1MEw
+    </string>
+    <string name="NT_L2_start_name4">Garfield</string>
+    <string name="NT_L2_start_date4">15.05.2005</string>
 </resources>

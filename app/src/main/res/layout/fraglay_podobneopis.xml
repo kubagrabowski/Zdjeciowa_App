@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="@string/NT_L2_opis_txttagi"
+            android:textColor="@color/violet"
+            android:textSize="@dimen/NT_L2_opis_etykietaSize"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidth"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtTagi"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/NT_L2_margin" android:layout_marginTop="@dimen/NT_L2_margin"
+            app:layout_constraintTop_toBottomOf="@+id/txtNazwa"/>
+    <TextView
+            android:text="@string/NT_L2_opis_txtnazwa"
+            android:textColor="@color/california"
+            android:textSize="@dimen/NT_L2_opis_etykietaSize"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidth"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtNazwa" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/NT_L2_margin"
+            android:layout_marginTop="@dimen/NT_L2_margin" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="@string/NT_L2_opis_txtdata"
+            android:textSize="@dimen/NT_L2_opis_etykietaSize"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidth"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtData" android:layout_marginTop="@dimen/NT_L2_margin"
+            app:layout_constraintTop_toBottomOf="@+id/txtTagi" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/NT_L2_margin"/>
+    <TextView
+            android:text=""
+            android:textColor="@color/california"
+            android:textSize="@dimen/NT_L2_opis_etykietaSizeEdit"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidthEdit"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtNazwaE"
+            app:layout_constraintStart_toEndOf="@+id/txtNazwa"
+            android:layout_marginStart="@dimen/NT_L2_margin" android:layout_marginTop="@dimen/NT_L2_margin"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+            android:text=""
+            android:textColor="@color/violet"
+            android:textSize="@dimen/NT_L2_opis_etykietaSizeEdit"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidthEdit"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtTagiE"
+            app:layout_constraintStart_toEndOf="@+id/txtTagi"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNazwaE"/>
+    <TextView
+            android:text=""
+            android:textSize="@dimen/NT_L2_opis_etykietaSizeEdit"
+            android:layout_width="@dimen/NT_L2_opis_etykietawidthEdit"
+            android:layout_height="@dimen/NT_L2_opis_etykietaheight"
+            android:id="@+id/txtDataE" android:layout_marginTop="@dimen/NT_L2_margin"
+            app:layout_constraintTop_toBottomOf="@+id/txtTagiE" app:layout_constraintStart_toEndOf="@+id/txtData"
+            android:layout_marginStart="@dimen/NT_L2_margin"/>
+    <TextView
+            android:text="@string/NT_L2_opis_txtpodobne"
+            android:textColor="@color/rust"
+            android:textSize="@dimen/NT_L2_etykietaPodobneSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8" android:layout_marginBottom="@dimen/NT_L2_margin"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/NT_L2_margin" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/NT_L2_margin" android:textAlignment="center"/>
+</android.support.constraint.ConstraintLayout>
