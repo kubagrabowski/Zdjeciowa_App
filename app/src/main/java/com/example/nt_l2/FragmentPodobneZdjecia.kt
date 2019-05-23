@@ -20,7 +20,7 @@ class FragmentPodobneZdjecia:Fragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val ilezdjec = arguments!!.getInt("ILEPOD")
+        //val ilezdjec = arguments!!.getInt("ILEPOD")
         Log.d("FOTY", "Szuka")
         WybierzNajblizszeZdjecia()
     }

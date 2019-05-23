@@ -1,29 +1,43 @@
 package com.example.nt_l2
 
-import android.content.Context
+import android.annotation.TargetApi
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
+import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.view.GestureDetector.SimpleOnGestureListener
+import android.view.MotionEvent.*
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_fragment.*
 
 
 class FragmentActivity : AppCompatActivity() {
+
+    //var fragPodAll: FragmentPodobneAll? = null
+    //var fragZdjecie: Fragment_zdjecie? = null
+
+    var xstart =  0F
+    var ystart = 0F
+    var xend = 0F
+    var yend = 0F
+    var fragPodAll: Fragment? = null
+    var fragZdjecie: Fragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)
 
 
-        var fragZ = Fragment_zdjecie()
-        fragZ.arguments = intent.extras
+        fragPodAll = FragmentPodobneAll()
+        fragZdjecie = Fragment_zdjecie()
+        fragZdjecie!!.arguments = intent.extras
         val transakcja:FragmentTransaction = supportFragmentManager.beginTransaction()
-        transakcja.add(R.id.frag_megazdjecie, fragZ)
+        transakcja.add(R.id.frag_megazdjecie, fragZdjecie!!)
         transakcja.commit()
 
         val actionbar = supportActionBar
@@ -31,11 +45,6 @@ class FragmentActivity : AppCompatActivity() {
         actionbar.run {
             setDisplayHomeAsUpEnabled(true)
         }
-
-        frag_megazdjecie.setOnGenericMotionListener{ v:View, event:MotionEvent ->
-            GestureDetector(GestureListener(supportFragmentManager)).onTouchEvent(event)
-        }
-
 
     }
 
@@ -45,44 +54,52 @@ class FragmentActivity : AppCompatActivity() {
         return true
     }
 
-    private class GestureListener(val v:FragmentManager) : SimpleOnGestureListener() {
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
 
-        private val SWIPE_DISTANCE_THRESHOLD = 100
-        private val SWIPE_VELOCITY_THRESHOLD = 100
-
-        override fun onDown(e: MotionEvent): Boolean {
-            return true
-        }
-
-        override fun onFling(e1: MotionEvent, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
-            val distanceX = e2.x - e1.x
-            val distanceY = e2.y - e1.y
-            if (Math.abs(distanceX) > Math.abs(distanceY) && Math.abs(distanceX) > SWIPE_DISTANCE_THRESHOLD && Math.abs(
-                    velocityX
-                ) > SWIPE_VELOCITY_THRESHOLD
-            ) {
-                if (distanceX > 0) {//OnSwipeRight
-                    val fragPod = FragmentPodobneAll()
-                    val transakcja:FragmentTransaction = v.beginTransaction()
-                    transakcja.replace(R.id.frag_megazdjecie, fragPod)
-                    transakcja.commit()
-                }
-
-
+        when(event!!.actionMasked){
+            ACTION_DOWN -> {
+                Log.d("Act", "down")
+                xstart = event.x
+                ystart = event.y
                 return true
             }
-            return false
+            ACTION_UP -> {
+                Log.d("Act", "Up")
+                xend = event.x
+                yend = event.y
+
+                if(xstart<xend){//left
+                    Log.d("Act", "Right")
+                    onRightSwipe()
+
+                }
+                else{//right
+                    Log.d("Act", "Left")
+                    onLeftSwipe()
+
+                }
+                return false
+            }
+            ACTION_CANCEL ->{
+                return false
+            }
+            else ->{
+                return super.onTouchEvent(event)
+            }
         }
 
     }
 
-    fun szczegoly(view: View){
-
-        val fragPod = FragmentPodobneAll()
+    fun onLeftSwipe(){
         val transakcja:FragmentTransaction = supportFragmentManager.beginTransaction()
-        transakcja.replace(R.id.frag_megazdjecie, fragPod)
+        transakcja.replace(R.id.frag_megazdjecie, fragPodAll!!)
         transakcja.commit()
+    }
 
+    fun onRightSwipe(){
+        val transakcja:FragmentTransaction = supportFragmentManager.beginTransaction()
+        transakcja.replace(R.id.frag_megazdjecie, fragZdjecie!!)
+        transakcja.commit()
     }
 
     fun UstawPodobne(){

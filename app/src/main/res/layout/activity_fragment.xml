@@ -5,13 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentActivity">
+        tools:context=".FragmentActivity"
+        android:id = "@+id/frag_lay">
 
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="match_parent"
-                 android:id="@+id/frag_megazdjecie" android:clickable="true" tools:layout_editor_absoluteY="0dp"
+                 android:id="@+id/frag_megazdjecie" tools:layout_editor_absoluteY="0dp"
                  tools:layout_editor_absoluteX="0dp"
-                 android:onClick="szczegoly"/>
+                 />
 
 
 </android.support.constraint.ConstraintLayout>
